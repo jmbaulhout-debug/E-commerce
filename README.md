@@ -1,6 +1,7 @@
 Projeto E-commerce - Curso Analise de Dados com Power BI
 
-Projeto Conceitual – Sistema de E-commerce.
+Projeto Conceitual – Sistema E-commerce.
+
 Contexto Geral.
 O projeto tem como objetivo representar, de forma conceitual, o funcionamento de um sistema de comércio eletrônico que integra clientes, produtos, fornecedores, vendedores terceiros, pedidos, pagamentos, entregas e cancelamentos. A modelagem busca garantir rastreabilidade, flexibilidade e integridade dos dados em todas as etapas do processo de compra.
 
@@ -35,11 +36,6 @@ O Estoque é atualizado conforme os produtos vendidos.
 O Pedido gera uma Entrega, que acompanha o status e rastreio.
 Caso o cliente solicite, o Cancelamento Pedido é registrado, alterando o status do pedido e armazenando o motivo e a data.
 
-Objetivo da Modelagem
 
-Garantir consistência entre as entidades relacionadas.
-Permitir análise de desempenho de vendas, entregas e cancelamentos.
-Facilitar auditoria e histórico de transações.
-Oferecer flexibilidade para expansão futura (ex.: devoluções, avaliações, promoções).
 
 
