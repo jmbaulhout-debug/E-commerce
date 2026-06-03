@@ -56,5 +56,36 @@ Serviço: CódigoServiço, Descrição, Valor (referência tabela mão-de-obra).
 Peça: CódigoPeça, Descrição,ValorUnitário.
 
 
+Relacionamentos.
+
+
+Cliente possui vários Veículos (1:N).
+
+Veículo gera várias OS (1:N).
+
+OS é atribuída a uma Equipe (N:1).
+
+Equipe é composta por vários Mecânicos (N:N).
+
+OS contém vários Serviços (N:N).
+
+OS contém várias Peças (N:N).
+
+Cliente autoriza a execução da OS (1:1).
+
+
+
+Observações Importantes.
+
+
+O valor da OS é calculado pela soma dos serviços (mão-de-obra) + peças utilizadas.
+
+Uma mesma peça ou serviço pode aparecer em várias OS.
+
+O status da OS indica se está em andamento, concluída ou aguardando autorização.
+
+
+
+
 
 
