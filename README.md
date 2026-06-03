@@ -1,4 +1,5 @@
-Projeto E-commerce - Curso Analise de Dados com Power BI
+
+Curso Analise de Dados com Power BI.
 
 Projeto Conceitual – Sistema E-commerce.
 
