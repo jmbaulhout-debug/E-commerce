@@ -37,49 +37,30 @@ Levantamento de Requisitos.
 - Cada OS possui: n°, data de emissão, um valor, status e uma data para conclusão dos trabalhos.
 - Uma OS pode ser composta por vários serviços e um mesmo serviço pode estar contido em mais de uma OS.
 - Uma OS pode ter vários tipos de peça e uma peça pode estar presente em mais de uma OS.
+# Sistema Oficina Mecânica – Projeto Conceitual
 
+Este projeto apresenta o esquema conceitual de um sistema de controle e gerenciamento de ordens de serviço em uma oficina mecânica.  
 
-Entidades e Atributos.
+## Objetivo
+Gerenciar clientes, veículos, equipes de mecânicos, serviços e peças utilizados em ordens de serviço, garantindo rastreabilidade e cálculo automático de valores.
 
-Cliente: CódigoCliente, Nome, Endereço, Telefone.
+## Entidades Principais
+- Cliente
+- Veículo
+- Mecânico
+- Equipe
+- Ordem de Serviço
+- Serviço
+- Peça
 
-Veículo: Placa, Modelo, Ano, Cliente (FK).
+## Relacionamentos
+- Cliente possui vários veículos
+- Veículo gera várias ordens de serviço
+- Ordem de serviço é atribuída a uma equipe
+- Equipe é composta por vários mecânicos
+- Ordem de serviço contém vários serviços e peças
+- Cliente autoriza a execução da ordem de serviço
 
-Mecânico: CódigoMecânico, Nome, Endereço, Especialidade.
-
-Equipe: CódigoEquipe,,NomeEquipe,,Mecânicos (relação N:N).
-
-Ordem de Serviço (OS): NúmeroOS, DataEmissão, DataEntrega,,ValorTotal,,Status, Veículo (FK), Equipe (FK).
-
-Serviço: CódigoServiço, Descrição, Valor (referência tabela mão-de-obra).
-
-Peça: CódigoPeça, Descrição,ValorUnitário.
-
-
-Relacionamentos.
-
-
-Cliente possui vários Veículos (1:N).
-
-Veículo gera várias OS (1:N).
-
-OS é atribuída a uma Equipe (N:1).
-
-Equipe é composta por vários Mecânicos (N:N).
-
-OS contém vários Serviços (N:N).
-
-OS contém várias Peças (N:N).
-
-Cliente autoriza a execução da OS (1:1).
-
-
-
-Observações Importantes.
-
-
-O valor da OS é calculado pela soma dos serviços (mão-de-obra) + peças utilizadas.
-
-Uma mesma peça ou serviço pode aparecer em várias OS.
-
-O status da OS indica se está em andamento, concluída ou aguardando autorização.
+## Observações
+- O valor da OS é calculado pela soma dos serviços (mão-de-obra) e peças utilizadas.
+- O status da OS indica se está em andamento, concluída ou aguardando autorização.
